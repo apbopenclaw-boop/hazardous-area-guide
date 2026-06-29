@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hazardous Area Guide — Independent Reference for ATEX & IECEx Equipment</title>
+<meta name="description" content="Independent engineering references for ATEX and IECEx certified equipment — phones, radios, tablets, and technical guides for Zone 1 and Zone 2 hazardous areas." />
+<link rel="canonical" href="https://hazardousareaguide.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Hazardous Area Guide — ATEX & IECEx Equipment Reference" />
+<meta property="og:description" content="Independent engineering references for ATEX and IECEx certified equipment — phones, radios, tablets, and technical guides for Zone 1 and Zone 2 hazardous areas." />
+<meta property="og:url" content="https://hazardousareaguide.com/" />
+<meta property="og:site_name" content="hazardousareaguide.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Hazardous Area Guide — ATEX & IECEx Equipment Reference" />
+<meta name="twitter:description" content="Independent engineering references for ATEX and IECEx certified equipment for hazardous areas." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;--bg-alt:#f5f3f0;--surface:#f0ece7;--border:#e0dcd6;--border-strong:#d1ccc3;
+    --ink:#1a1a1a;--graphite:#4a4a4a;--ash:#888880;--active:#22c55e;--mint:#dcfce7;
+    --amber:#f59e0b;--void:#0c0c0c;
+    --radius-sm:10px;--radius:16px;--radius-lg:24px;--radius-pill:100px;
+    --space-section:clamp(5rem, 3rem + 5.5vw, 9rem);
+  }
+  html,body{background:var(--bg);color:var(--ink);}
+  body{font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","cv11";}
+  .serif{font-family:'Instrument Serif','Times New Roman',serif;font-weight:400;letter-spacing:-0.01em;line-height:1.1;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-variant-ligatures:none;}
+  .glass{background:rgba(255,255,255,0.72);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(224,220,214,0.6);}
+  .paper-bg{background:radial-gradient(1200px 600px at 80% -10%,rgba(245,158,11,0.06),transparent 60%),radial-gradient(1000px 500px at 10% 30%,rgba(34,197,94,0.05),transparent 55%),linear-gradient(180deg,#faf8f4 0%,#ffffff 60%);}
+  .grain{position:absolute;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(rgba(0,0,0,0.05) 1px,transparent 1px);background-size:3px 3px;mix-blend-mode:multiply;}
+  .card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);transition:border-color .2s ease,transform .2s ease;}
+  .card:hover{border-color:var(--border-strong);transform:translateY(-2px);}
+  .btn{display:inline-flex;align-items:center;gap:.55rem;border-radius:var(--radius-pill);padding:.75rem 1.6rem;font-weight:500;font-size:.9rem;transition:all .2s ease;white-space:nowrap;}
+  .btn-primary{background:var(--ink);color:#fff;}
+  .btn-primary:hover{background:#000;}
+  .btn-secondary{background:var(--bg);color:var(--ink);border:1.5px solid var(--border);}
+  .btn-secondary:hover{border-color:var(--border-strong);}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;border-radius:var(--radius-pill);padding:.3em 0.9em;font-size:.76rem;font-weight:500;letter-spacing:.01em;white-space:nowrap;}
+  .badge-green{background:var(--mint);color:#166534;}
+  .badge-warn{background:#fef3c7;color:#92400e;}
+  .badge-neutral{background:var(--bg-alt);color:var(--graphite);border:1px solid var(--border);}
+  .badge-stone{background:var(--surface);color:var(--graphite);}
+  .badge-dark{background:var(--void);color:#fff;}
+  .chip{display:inline-flex;align-items:center;gap:.35rem;padding:3px 8px;border-radius:6px;background:var(--bg-alt);border:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--graphite);}
+  .hb{position:relative;display:inline-flex;width:10px;height:10px;}
+  .hb::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--active);box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:hb 2s ease-in-out infinite;}
+  .hb::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--active);}
+  @keyframes hb{0%{box-shadow:0 0 0 0 rgba(34,197,94,.45);transform:scale(1);}70%{box-shadow:0 0 0 10px rgba(34,197,94,0);transform:scale(1.18);}100%{box-shadow:0 0 0 0 rgba(34,197,94,0);transform:scale(1);}}
+  .hr-rule{height:1px;background:var(--border);}
+  .reveal{opacity:0;transform:translateY(12px);animation:reveal .6s ease-out forwards;}
+  @keyframes reveal{to{opacity:1;transform:none;}}
+  .r1{animation-delay:.05s}.r2{animation-delay:.19s}.r3{animation-delay:.33s}.r4{animation-delay:.47s}.r5{animation-delay:.61s}
+  .h-hero{font-size:clamp(2.8rem,7vw,5.4rem);}
+  .h-section{font-size:clamp(2rem,4vw,3rem);}
+  .col-rule{border-left:1px solid var(--border);}
+  @media(max-width:1023px){.col-rule{border-left:0;border-top:1px solid var(--border);padding-top:2rem;margin-top:2rem;}}
+  .mobile-drawer{background:var(--bg);border-left:1px solid var(--border);}
+  .mobile-nav-link{display:block;padding:10px 12px;border-radius:10px;font-size:15px;color:var(--ink);text-decoration:none;transition:background .12s;}
+  .mobile-nav-link:hover{background:var(--surface);}
+  .site-card{position:relative;overflow:hidden;}
+  .site-card .site-icon{width:64px;height:64px;border-radius:var(--radius-sm);background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .site-card .arrow{opacity:0;transform:translateX(-8px);transition:all .2s ease;}
+  .site-card:hover .arrow{opacity:1;transform:translateX(0);}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hazardous Area Guide",
+  "url": "https://hazardousareaguide.com/",
+  "description": "Independent engineering references for ATEX and IECEx certified equipment — phones, radios, tablets, and technical guides for Zone 1 and Zone 2 hazardous areas."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What equipment do workers need in a hazardous area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Workers in ATEX-classified hazardous areas need certified communication equipment including intrinsically safe smartphones (or Ex cases for consumer phones), ATEX-certified two-way radios (DMR, TETRA, or PoC), and explosion proof tablets. All devices must carry ATEX or IECEx certification matching the zone classification of their work environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Zone 1 and Zone 2 equipment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zone 1 equipment (Category 2G) is certified for areas where explosive atmospheres occur occasionally during normal operation. Zone 2 equipment (Category 3G) is for areas where explosive atmospheres are not expected but may occur briefly. Zone 1 certified equipment can always be used in Zone 2, but not vice versa. For maximum flexibility, specify Zone 1 equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does ATEX certification mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ATEX refers to the EU Directive 2014/34/EU governing equipment intended for use in potentially explosive atmospheres. ATEX certification means a product has been tested and certified by a Notified Body to be safe for use in classified hazardous areas. The certification specifies the zone rating, gas group, temperature class, and protection concept (e.g., Ex ib IIC T4 Gb for Zone 1 use with all Group II gases)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is IECEx the same as ATEX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ATEX and IECEx are different certification schemes based on the same IEC 60079 technical standards. ATEX is mandatory in the EU/EEA. IECEx is a voluntary international scheme accepted in 30+ countries. Equipment can be dual-certified under both. For global deployment, dual ATEX + IECEx certification is recommended."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="min-h-screen">
+
+<!-- =========== NAV =========== -->
+<header class="glass sticky top-0 z-30">
+  <div class="max-w-[1140px] mx-auto px-6 h-16 flex items-center gap-6">
+    <a href="/" class="flex items-center gap-2.5 shrink-0">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 2.5l11.5 6.5v13L16 28.5 4.5 22V9L16 2.5Z" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/>
+        <circle cx="16" cy="15" r="5" stroke="#1a1a1a" stroke-width="1.6"/>
+        <circle cx="16" cy="15" r="1.8" fill="#22c55e"/>
+        <path d="M16 10V6M16 24v-4M10.5 15H6.5M25.5 15h-4" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+      <span class="flex flex-col leading-none">
+        <span class="text-[15px] font-semibold tracking-[-0.015em]">hazardousareaguide<span style="color:var(--ash)" class="font-normal">.com</span></span>
+        <span class="mono text-[9.5px] uppercase tracking-[0.16em] mt-1" style="color:var(--ash)">independent reference</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-[14px]" style="color:var(--graphite)">
+      <a href="/#guides" class="hover:text-[color:var(--ink)] transition-colors">Guides</a>
+      <a href="/#standards" class="hover:text-[color:var(--ink)] transition-colors">Standards</a>
+      <a href="/#about" class="hover:text-[color:var(--ink)] transition-colors">About</a>
+      <a href="/#contact" class="hover:text-[color:var(--ink)] transition-colors">Contact</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-3">
+      <span class="hidden lg:inline mono text-[11.5px]" style="color:var(--ash)">Rev 2026.06</span>
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="md:hidden p-2 -mr-2" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 z-40">
+  <div class="absolute inset-0 bg-black/30 backdrop-blur-sm" onclick="document.getElementById('mobileMenu').classList.add('hidden')"></div>
+  <div class="mobile-drawer absolute right-0 top-0 bottom-0 w-[280px] shadow-2xl overflow-y-auto">
+    <div class="p-6 pt-5">
+      <div class="flex items-center justify-between mb-8">
+        <span class="font-semibold text-sm">Menu</span>
+        <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="p-1.5 rounded-lg" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-1">
+        <a href="/" class="mobile-nav-link">Home</a>
+        <a href="/#guides" class="mobile-nav-link">Guides</a>
+        <a href="/#standards" class="mobile-nav-link">Standards</a>
+        <a href="/#about" class="mobile-nav-link">About</a>
+        <a href="/#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- =========== HERO =========== -->
+<section class="paper-bg relative overflow-hidden">
+  <div class="grain"></div>
+  <div class="max-w-[1140px] mx-auto px-6 pt-20 pb-16 relative">
+
+    <div class="flex items-center gap-3 mb-8 reveal r1">
+      <span class="hb"></span>
+      <span class="mono text-[12px] tracking-[0.04em] text-[color:var(--graphite)]">Independent engineering reference · vendor-neutral</span>
+    </div>
+
+    <h1 class="serif h-hero reveal r1">
+      The complete guide to<br/>
+      <em class="text-[color:var(--graphite)] italic">communication equipment</em><br/>
+      in hazardous areas.
+    </h1>
+
+    <p class="mt-8 max-w-[62ch] text-[18px] leading-[1.55] text-[color:var(--graphite)] reveal r2">
+      Independent, vendor-neutral comparison guides for every category of ATEX and IECEx certified communication equipment — smartphones, two-way radios, tablets, and technical references. Written for HSE engineers, procurement, and operations teams working in Zone 1 and Zone 2 classified environments.
+    </p>
+
+    <div class="mt-10 flex flex-wrap items-center gap-3 reveal r2">
+      <a href="#guides" class="btn btn-primary">Browse guides →</a>
+      <a href="#standards" class="btn btn-secondary">Understand the standards</a>
+    </div>
+
+    <!-- stat row -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-0 border-y border-[color:var(--border)] reveal r3">
+      <div class="py-6 pr-6 border-r border-[color:var(--border)]">
+        <div class="serif text-[42px] leading-none">4</div>
+        <div class="text-[13px] text-[color:var(--ash)] mt-2">Specialist guides</div>
+      </div>
+      <div class="py-6 px-6 md:border-r md:border-[color:var(--border)]">
+        <div class="serif text-[42px] leading-none">20<span class="text-[color:var(--ash)] text-[26px]">+</span></div>
+        <div class="text-[13px] text-[color:var(--ash)] mt-2">Devices compared</div>
+      </div>
+      <div class="py-6 pr-6 md:px-6 border-r border-[color:var(--border)] border-t md:border-t-0">
+        <div class="serif text-[42px] leading-none">0</div>
+        <div class="text-[13px] text-[color:var(--ash)] mt-2">Vendor affiliations</div>
+      </div>
+      <div class="py-6 px-6 border-t md:border-t-0">
+        <div class="serif text-[42px] leading-none flex items-center gap-3">IEC<span class="text-[color:var(--ash)] text-[22px]">60079</span></div>
+        <div class="text-[13px] text-[color:var(--ash)] mt-2">Standard family</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== GUIDE CARDS =========== -->
+<section id="guides" class="anchor">
+  <div class="max-w-[1140px] mx-auto px-6 pt-24 pb-24">
+    <div class="mb-12">
+      <div class="mono text-[12px] text-[color:var(--ash)] mb-3">§ 01 — Equipment guides</div>
+      <h2 class="serif h-section">One guide per category.<br/><em class="italic text-[color:var(--graphite)]">Every certified device, compared.</em></h2>
+      <p class="mt-5 max-w-[58ch] text-[16px] leading-[1.55] text-[color:var(--graphite)]">
+        Each guide covers a specific equipment category — verified specs, certification data, and honest deployment notes. No marketing copy. No paid placements.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Phones -->
+      <a href="https://intrinsicallysafephones.com" target="_blank" rel="noopener" class="card site-card p-8 block no-underline">
+        <div class="flex items-start gap-5">
+          <div class="site-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <rect x="10" y="6" width="12" height="20" rx="2.5" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="14" y1="23" x2="18" y2="23" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="16" cy="10" r="1.5" fill="#22c55e"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-green"><span class="hb !w-[6px] !h-[6px]"></span>Live</span>
+              <span class="chip">8 devices</span>
+            </div>
+            <h3 class="serif text-[24px] leading-tight">Intrinsically Safe Phones</h3>
+            <p class="mono text-[12px] text-[color:var(--ash)] mt-1">intrinsicallysafephones.com</p>
+            <p class="text-[14.5px] text-[color:var(--graphite)] mt-3 leading-[1.55]">
+              Compare every ATEX and IECEx certified smartphone and Ex case for Zone 1 and Zone 2 — including certified iPhone cases, dedicated Android Ex phones, and device conversions. Specs verified against certificates of conformity.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="chip">Ex cases</span>
+              <span class="chip">Dedicated phones</span>
+              <span class="chip">iOS &amp; Android</span>
+            </div>
+          </div>
+          <span class="arrow text-[color:var(--ash)] text-[20px] mt-2">→</span>
+        </div>
+      </a>
+
+      <!-- Radios -->
+      <a href="https://explosionproofradios.com" target="_blank" rel="noopener" class="card site-card p-8 block no-underline">
+        <div class="flex items-start gap-5">
+          <div class="site-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <rect x="10" y="8" width="12" height="16" rx="2" stroke="#1a1a1a" stroke-width="1.5"/>
+              <circle cx="16" cy="12" r="1.5" fill="#22c55e"/>
+              <line x1="16" y1="4" x2="16" y2="8" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-green"><span class="hb !w-[6px] !h-[6px]"></span>Live</span>
+              <span class="chip">7 radios</span>
+            </div>
+            <h3 class="serif text-[24px] leading-tight">Explosion Proof Radios</h3>
+            <p class="mono text-[12px] text-[color:var(--ash)] mt-1">explosionproofradios.com</p>
+            <p class="text-[14.5px] text-[color:var(--graphite)] mt-3 leading-[1.55]">
+              Compare ATEX and IECEx certified two-way radios — DMR, TETRA, and Push-to-Talk over Cellular. Covers Motorola Solutions, Kenwood, Sepura, and i.safe MOBILE. No Chinese manufacturers.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="chip">DMR</span>
+              <span class="chip">TETRA</span>
+              <span class="chip">PoC</span>
+            </div>
+          </div>
+          <span class="arrow text-[color:var(--ash)] text-[20px] mt-2">→</span>
+        </div>
+      </a>
+
+      <!-- Tablets -->
+      <a href="https://explosionprooftablets.com" target="_blank" rel="noopener" class="card site-card p-8 block no-underline">
+        <div class="flex items-start gap-5">
+          <div class="site-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <rect x="6" y="8" width="20" height="16" rx="2.5" stroke="#1a1a1a" stroke-width="1.5"/>
+              <circle cx="16" cy="16" r="1.5" fill="#f59e0b"/>
+              <line x1="12" y1="21" x2="20" y2="21" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-warn">Coming soon</span>
+            </div>
+            <h3 class="serif text-[24px] leading-tight">Explosion Proof Tablets</h3>
+            <p class="mono text-[12px] text-[color:var(--ash)] mt-1">explosionprooftablets.com</p>
+            <p class="text-[14.5px] text-[color:var(--graphite)] mt-3 leading-[1.55]">
+              ATEX and IECEx certified tablets and rugged displays for hazardous areas. Comparison of Zone 1 and Zone 2 certified tablets from established manufacturers.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="chip">Tablets</span>
+              <span class="chip">Rugged displays</span>
+            </div>
+          </div>
+          <span class="arrow text-[color:var(--ash)] text-[20px] mt-2">→</span>
+        </div>
+      </a>
+
+      <!-- exknowledge -->
+      <a href="https://exknowledge.com" target="_blank" rel="noopener" class="card site-card p-8 block no-underline">
+        <div class="flex items-start gap-5">
+          <div class="site-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M8 6h16v20H8z" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+              <line x1="12" y1="11" x2="20" y2="11" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="12" y1="15" x2="20" y2="15" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+              <line x1="12" y1="19" x2="17" y2="19" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="5" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1.2"/>
+              <path d="M22 20v4M20 22h4" stroke="#22c55e" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge badge-green"><span class="hb !w-[6px] !h-[6px]"></span>Live</span>
+              <span class="chip">Knowledge base</span>
+            </div>
+            <h3 class="serif text-[24px] leading-tight">Ex Knowledge</h3>
+            <p class="mono text-[12px] text-[color:var(--ash)] mt-1">exknowledge.com</p>
+            <p class="text-[14.5px] text-[color:var(--graphite)] mt-3 leading-[1.55]">
+              Technical reference articles on ATEX and IECEx certification, zone classification, protection concepts, and hazardous area equipment selection. The knowledge backbone of the guide network.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="chip">ATEX explained</span>
+              <span class="chip">Zone classification</span>
+              <span class="chip">Protection concepts</span>
+            </div>
+          </div>
+          <span class="arrow text-[color:var(--ash)] text-[20px] mt-2">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========== WHY THIS EXISTS =========== -->
+<section class="bg-[color:var(--bg-alt)] border-y border-[color:var(--border)]">
+  <div class="max-w-[1140px] mx-auto px-6 py-24">
+    <div class="max-w-[680px]">
+      <div class="mono text-[12px] text-[color:var(--ash)] mb-3">§ 02 — Why this exists</div>
+      <h2 class="serif h-section">Hazardous area equipment selection <em class="italic text-[color:var(--graphite)]">shouldn't require a sales call.</em></h2>
+      <p class="mt-6 text-[16.5px] leading-[1.6] text-[color:var(--graphite)]">
+        Selecting ATEX-certified communication equipment for explosive atmospheres is a safety-critical decision. But finding reliable, comparable specifications is unreasonably difficult. Manufacturer datasheets use inconsistent terminology, certification details are buried in PDF appendices, and most "comparison" sites are thinly-disguised reseller pages.
+      </p>
+      <p class="mt-4 text-[16.5px] leading-[1.6] text-[color:var(--graphite)]">
+        This guide network exists to fix that. Every specification is verified against the manufacturer's Certificate of Conformity or IECEx online records. Every device is presented in the same comparable layout. No paid placements. No vendor partnerships. No affiliate commissions.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14">
+      <div class="p-6 rounded-[var(--radius)] bg-[color:var(--bg)] border border-[color:var(--border)]">
+        <div class="mono text-[11px] text-[color:var(--ash)] uppercase tracking-wider mb-3">Principle 01</div>
+        <h3 class="serif text-[22px] leading-tight mb-2">Vendor-neutral.</h3>
+        <p class="text-[14.5px] leading-[1.55] text-[color:var(--graphite)]">No commercial relationships with any equipment manufacturer. Scores are based on published specifications and certification data, not advertising budgets.</p>
+      </div>
+      <div class="p-6 rounded-[var(--radius)] bg-[color:var(--bg)] border border-[color:var(--border)]">
+        <div class="mono text-[11px] text-[color:var(--ash)] uppercase tracking-wider mb-3">Principle 02</div>
+        <h3 class="serif text-[22px] leading-tight mb-2">Certificate-verified.</h3>
+        <p class="text-[14.5px] leading-[1.55] text-[color:var(--graphite)]">Every Ex notation, zone rating, gas group, and temperature class is checked against the actual EU-Type Examination Certificate or IECEx Certificate of Conformity.</p>
+      </div>
+      <div class="p-6 rounded-[var(--radius)] bg-[color:var(--bg)] border border-[color:var(--border)]">
+        <div class="mono text-[11px] text-[color:var(--ash)] uppercase tracking-wider mb-3">Principle 03</div>
+        <h3 class="serif text-[22px] leading-tight mb-2">Written for engineers.</h3>
+        <p class="text-[14.5px] leading-[1.55] text-[color:var(--graphite)]">These guides are written for HSE engineers, procurement teams, and operations managers — not for consumers. The tone is technical. The scope is practical. The goal is faster, safer procurement decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========== STANDARDS =========== -->
+<section id="standards" class="anchor">
+  <div class="max-w-[1140px] mx-auto px-6 pt-24 pb-20">
+    <div class="mb-12">
+      <div class="mono text-[12px] text-[color:var(--ash)] mb-3">§ 03 — Standards quick reference</div>
+      <h2 class="serif h-section max-w-[22ch]">The standards behind <em class="italic text-[color:var(--graphite)]">every certification.</em></h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <article>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-dark">ATEX</span>
+        </div>
+        <h3 class="serif text-[24px] leading-[1.1] mb-3">Directive 2014/34/EU</h3>
+        <p class="text-[15px] leading-[1.55] text-[color:var(--graphite)]">
+          The EU directive governing equipment and protective systems intended for use in potentially explosive atmospheres. Mandatory for equipment placed on the EU/EEA market. Requires CE marking and a Notified Body-issued EU-Type Examination Certificate.
+        </p>
+        <div class="mt-4 p-4 rounded-[var(--radius-sm)] bg-[color:var(--surface)] text-[13px] text-[color:var(--graphite)]">
+          <strong>Scope:</strong> EU/EEA + Switzerland, Turkey, and countries accepting CE marking.
+        </div>
+      </article>
+      <article class="lg:col-rule lg:pl-10">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-neutral">IECEx</span>
+        </div>
+        <h3 class="serif text-[24px] leading-[1.1] mb-3">IEC 60079 series</h3>
+        <p class="text-[15px] leading-[1.55] text-[color:var(--graphite)]">
+          The international certification scheme for explosive atmospheres, administered by the IEC. Accepted in 30+ countries including UK, Australia, Singapore, UAE, Saudi Arabia, Brazil, and South Africa. Based on the same IEC 60079 technical standards as ATEX.
+        </p>
+        <div class="mt-4 p-4 rounded-[var(--radius-sm)] bg-[color:var(--surface)] text-[13px] text-[color:var(--graphite)]">
+          <strong>Scope:</strong> Global (voluntary). Increasingly required alongside or instead of national schemes.
+        </div>
+      </article>
+      <article class="lg:col-rule lg:pl-10">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-warn">Worker protection</span>
+        </div>
+        <h3 class="serif text-[24px] leading-[1.1] mb-3">Directive 1999/92/EC</h3>
+        <p class="text-[15px] leading-[1.55] text-[color:var(--graphite)]">
+          The "ATEX Worker Protection Directive" — also known as ATEX 153 (formerly ATEX 137). Requires employers to classify hazardous areas into zones, select appropriate equipment, and implement an Explosion Protection Document. Transposed into national law as DSEAR (UK), VEXAT (Austria), etc.
+        </p>
+        <div class="mt-4 p-4 rounded-[var(--radius-sm)] bg-[color:var(--surface)] text-[13px] text-[color:var(--graphite)]">
+          <strong>Key obligation:</strong> The employer — not the equipment manufacturer — is responsible for ensuring the correct zone classification and equipment selection.
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========== ABOUT =========== -->
+<section id="about" class="anchor bg-[color:var(--bg-alt)] border-y border-[color:var(--border)]">
+  <div class="max-w-[800px] mx-auto px-6 py-24 text-center">
+    <div class="mono text-[12px] text-[color:var(--ash)] mb-3">§ 04 — About</div>
+    <h2 class="serif h-section mb-6">Who maintains this?</h2>
+    <p class="text-[16.5px] leading-[1.6] text-[color:var(--graphite)]">
+      Hazardous Area Guide is maintained by an independent team of engineers with experience in Ex equipment procurement, zone classification, and ATEX/IECEx compliance. The guides are updated as new devices are certified and existing certifications change. This project is not affiliated with, endorsed by, or commercially connected to any equipment manufacturer.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <span class="chip">Independent</span>
+      <span class="chip">No affiliate links</span>
+      <span class="chip">No paid placements</span>
+      <span class="chip">No vendor partnerships</span>
+    </div>
+  </div>
+</section>
+
+<!-- =========== CONTACT =========== -->
+<section id="contact" class="py-20">
+  <div class="max-w-[640px] mx-auto px-6">
+    <div class="mono text-[11px] opacity-60 uppercase tracking-wider mb-3">§ Contact</div>
+    <h2 class="serif text-[32px] leading-tight mb-3">Get in touch</h2>
+    <p class="text-[14.5px] text-[color:var(--ash)] mb-8 leading-relaxed">
+      Questions, corrections, or suggestions for new equipment categories? We want to hear from you.
+    </p>
+    <form id="contactForm" action="https://formsubmit.co/apbopenclaw@gmail.com" method="POST" class="space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="mono text-[11px] opacity-60 uppercase tracking-wider block mb-1.5">Name</label>
+          <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-[var(--radius)] border border-[color:var(--border)] bg-[color:var(--bg)] text-[14px] focus:outline-none focus:border-[color:var(--ink)] transition" />
+        </div>
+        <div>
+          <label class="mono text-[11px] opacity-60 uppercase tracking-wider block mb-1.5">Email</label>
+          <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-[var(--radius)] border border-[color:var(--border)] bg-[color:var(--bg)] text-[14px] focus:outline-none focus:border-[color:var(--ink)] transition" />
+        </div>
+      </div>
+      <div>
+        <label class="mono text-[11px] opacity-60 uppercase tracking-wider block mb-1.5">Company</label>
+        <input type="text" name="company" class="w-full px-4 py-2.5 rounded-[var(--radius)] border border-[color:var(--border)] bg-[color:var(--bg)] text-[14px] focus:outline-none focus:border-[color:var(--ink)] transition" />
+      </div>
+      <div>
+        <label class="mono text-[11px] opacity-60 uppercase tracking-wider block mb-1.5">Message</label>
+        <textarea name="message" rows="4" required class="w-full px-4 py-2.5 rounded-[var(--radius)] border border-[color:var(--border)] bg-[color:var(--bg)] text-[14px] focus:outline-none focus:border-[color:var(--ink)] transition resize-none"></textarea>
+      </div>
+      <input type="text" name="_gotcha" style="display:none" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="hazardousareaguide.com — New contact" />
+      <button type="submit" class="px-6 py-2.5 bg-[color:var(--ink)] text-[color:var(--bg)] rounded-[var(--radius)] text-[14px] font-medium hover:opacity-90 transition">Send message</button>
+    </form>
+    <div id="formSuccess" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-[var(--radius)] text-[14px] text-green-800">
+      Message sent. We'll get back to you shortly.
+    </div>
+  </div>
+</section>
+
+<!-- =========== FOOTER =========== -->
+<footer class="bg-[color:var(--void)] text-[#e8ebe4]">
+  <div class="max-w-[1140px] mx-auto px-6 pt-20 pb-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5">
+        <div class="flex items-center gap-2.5 mb-5">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 2.5l11.5 6.5v13L16 28.5 4.5 22V9L16 2.5Z" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="16" cy="15" r="5" stroke="#ffffff" stroke-width="1.6"/>
+            <circle cx="16" cy="15" r="1.8" fill="#22c55e"/>
+          </svg>
+          <span class="font-semibold text-[15px]">hazardousareaguide<span class="opacity-60 font-normal">.com</span></span>
+        </div>
+        <p class="serif text-[28px] leading-[1.15] max-w-[22ch]">
+          Independent reference for hazardous area communication equipment.
+        </p>
+        <p class="text-[13.5px] mt-4 opacity-70 leading-[1.6] max-w-[60ch]">
+          This site provides engineering reference information only. It is not a substitute for a site-specific Ex inspection, DSEAR assessment, or the manufacturer's current Certificate of Conformity. Not affiliated with any equipment manufacturer.
+        </p>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="mono text-[11px] opacity-60 uppercase tracking-wider mb-4">Guide network</div>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a class="opacity-90 hover:opacity-100" href="https://intrinsicallysafephones.com" target="_blank" rel="noopener">intrinsicallysafephones.com</a></li>
+          <li><a class="opacity-90 hover:opacity-100" href="https://explosionproofradios.com" target="_blank" rel="noopener">explosionproofradios.com</a></li>
+          <li><a class="opacity-90 hover:opacity-100" href="https://explosionprooftablets.com" target="_blank" rel="noopener">explosionprooftablets.com</a></li>
+          <li><a class="opacity-90 hover:opacity-100" href="https://exknowledge.com" target="_blank" rel="noopener">exknowledge.com</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4">
+        <div class="mono text-[11px] opacity-60 uppercase tracking-wider mb-4">References</div>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a class="opacity-90 hover:opacity-100" href="https://www.iecex.com" target="_blank" rel="noopener">IECEx Online Certificate System</a></li>
+          <li><a class="opacity-90 hover:opacity-100" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0034" target="_blank" rel="noopener">ATEX Directive 2014/34/EU</a></li>
+          <li><a class="opacity-90 hover:opacity-100" href="https://webstore.iec.ch/en/publication/622" target="_blank" rel="noopener">IEC 60079 series</a></li>
+          <li><a class="opacity-90 hover:opacity-100" href="https://www.legislation.gov.uk/uksi/2002/2776/contents/made" target="_blank" rel="noopener">DSEAR 2002 (UK)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hr-rule !bg-[#1f1f1f] my-10"></div>
+    <div class="flex flex-wrap items-center justify-between gap-4 text-[12px] opacity-60">
+      <div>&copy; 2026 · hazardousareaguide.com · Rev 2026.06</div>
+      <div>Independent engineering reference — not affiliated with any manufacturer.</div>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- Contact form JS -->
+<script>
+const cf=document.getElementById('contactForm');
+if(cf) cf.addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=cf.querySelector('button[type=submit]');
+  btn.disabled=true;btn.textContent='Sending...';
+  try{
+    const r=await fetch(cf.action,{method:'POST',body:new FormData(cf),headers:{'Accept':'application/json'}});
+    if(r.ok){cf.reset();cf.style.display='none';document.getElementById('formSuccess').classList.remove('hidden');}
+    else{btn.textContent='Error — try again';btn.disabled=false;}
+  }catch{btn.textContent='Error — try again';btn.disabled=false;}
+});
+document.querySelectorAll('#mobileMenu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mobileMenu').classList.add('hidden');});});
+</script>
+</body>
+</html>

@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://hazardousareaguide.com/sitemap.xml
+
+# AI/LLM content
+# llms.txt: https://hazardousareaguide.com/llms.txt

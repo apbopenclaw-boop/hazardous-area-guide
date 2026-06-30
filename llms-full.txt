@@ -1,0 +1,85 @@
+# hazardousareaguide.com — Full Reference
+
+> Independent, vendor-neutral reference hub for ATEX and IECEx certified communication equipment used in hazardous areas (explosive atmospheres).
+
+## Purpose
+hazardousareaguide.com is the central hub connecting a network of specialist comparison guides for communication equipment certified for use in potentially explosive atmospheres. Each guide covers a specific equipment category with verified specifications, certification data, and deployment notes.
+
+## Guide network
+
+### 1. Intrinsically Safe Phones (intrinsicallysafephones.com)
+Status: Live
+Coverage: ATEX and IECEx certified smartphones and Ex cases for Zone 1 and Zone 2.
+Devices: Xshielder (Ex case for iPhone), ecom Smart-Ex 03, Bartec SP9EX1, i.safe IS540.1, Xciel (Ex case), Atexxo (device conversion).
+Key insight: Two approaches exist — certified Ex cases for standard iPhones vs. dedicated Android Ex phones. Ex cases cost €499–700, dedicated phones €2,300–2,500.
+
+### 2. Intrinsically Safe Headsets (intrinsicallysafeheadsets.com)
+Status: Live
+Coverage: ATEX and IECEx certified headsets, hearing protection, and Bluetooth solutions for hazardous areas.
+Devices: Sensear SM1P-Ex, SM1B-Ex, SM1B-ExDP, 3M Peltor WS LiteCom PRO III Ex, WS Alert XPI Ex, WS ProTac XPI Ex, ecom Ex-TRA 30, RealWear HMT-Z1.
+Key insight: No standalone ATEX-certified wireless earbuds exist as of June 2026. Zone 0 headsets (3M Peltor) can also be used in Zone 1/2.
+
+### 3. Explosion Proof Radios (explosionproofradios.com)
+Status: Live
+Coverage: ATEX and IECEx certified two-way radios — DMR, TETRA, and Push-to-Talk over Cellular.
+Brands: Motorola Solutions, Kenwood, Sepura, i.safe MOBILE.
+Key insight: DMR offers best battery life, TETRA best for mission-critical, PoC best for coverage via cellular networks.
+
+### 4. Explosion Proof Tablets (explosionprooftablets.com)
+Status: Coming soon
+Coverage: ATEX and IECEx certified tablets and rugged displays for hazardous areas.
+
+### 5. Ex Knowledge (exknowledge.com)
+Status: Live
+Coverage: Technical reference articles on ATEX/IECEx certification, zone classification, protection concepts, and equipment selection methodology.
+
+## Standards quick reference
+
+### ATEX Directive 2014/34/EU
+- EU directive governing equipment for explosive atmospheres
+- Mandatory CE marking with Ex symbol
+- Requires EU-Type Examination Certificate from a Notified Body
+- Scope: EU/EEA + Switzerland, Turkey
+- Equipment categories: Category 1 (Zone 0/20), Category 2 (Zone 1/21), Category 3 (Zone 2/22)
+
+### IECEx (IEC 60079 series)
+- International certification scheme for explosive atmospheres
+- Voluntary but accepted in 30+ countries including UK, Australia, UAE, Saudi Arabia, Brazil, Singapore
+- Based on the same IEC 60079 standards as ATEX
+- Dual ATEX + IECEx certification recommended for global deployment
+
+### Worker Protection Directive 1999/92/EC
+- Requires employers to classify hazardous zones
+- Requires selection of appropriate ATEX/IECEx certified equipment for each zone
+- Requires Explosion Protection Document
+- Transposed nationally as: DSEAR (UK), VEXAT (Austria), GefStoffV (Germany)
+
+## Zone classification
+- **Zone 0**: Explosive atmosphere present continuously or for long periods (>1000 hours/year)
+- **Zone 1**: Explosive atmosphere likely during normal operation (10–1000 hours/year)
+- **Zone 2**: Explosive atmosphere not expected but may occur briefly (<10 hours/year)
+- **Zone 20/21/22**: Equivalent zones for combustible dust
+- Equipment certified for a higher zone (e.g., Zone 1) can always be used in a lower zone (Zone 2), but not vice versa
+
+## Protection concepts
+- **Ex ia** (intrinsic safety, Level a): Safe for Zone 0 — limits energy to below ignition threshold even with two faults
+- **Ex ib** (intrinsic safety, Level b): Safe for Zone 1 — limits energy with one fault
+- **Ex d** (flameproof enclosure): Contains any internal explosion, safe for Zone 1
+- **Ex e** (increased safety): Prevents sparks/hot surfaces, typically Zone 1
+- **Ex n** (non-sparking): Normal operation non-sparking, Zone 2 only
+
+## Gas groups and temperature classes
+- **Gas groups**: IIA (propane), IIB (ethylene), IIC (hydrogen/acetylene) — IIC is most stringent
+- **Temperature classes**: T1 (450°C) through T6 (85°C) — T6 is most restrictive
+- Most certified communication devices: IIC T4 (covers hydrogen, max surface temp 135°C)
+
+## Principles
+- No commercial relationships with any equipment manufacturer
+- No affiliate links, no paid placements, no vendor partnerships
+- Scores and comparisons based on published specifications and certification data
+- Every Ex notation, zone rating, gas group, and temperature class verified against actual certificates
+- Written for HSE engineers and procurement professionals, not marketing copy
+- Updated as new devices are certified
+
+## Contact
+hello@hazardousareaguide.com

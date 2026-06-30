@@ -1,0 +1,31 @@
+# hazardousareaguide.com
+
+> Independent, vendor-neutral reference hub for ATEX and IECEx certified communication equipment used in hazardous areas (explosive atmospheres).
+
+## What this site covers
+- Overview of hazardous area equipment categories: smartphones, radios, tablets, headsets
+- Links to specialist comparison guides for each category
+- ATEX Directive 2014/34/EU and IECEx 60079 series quick reference
+- Zone classification basics (Zone 0/1/2 for gas, Zone 20/21/22 for dust)
+- Worker protection directive 1999/92/EC (DSEAR, VEXAT)
+
+## Guide network (specialist sites)
+1. **intrinsicallysafephones.com** — ATEX/IECEx certified smartphones and Ex cases for iPhone. 8 devices compared.
+2. **intrinsicallysafeheadsets.com** — ATEX/IECEx certified headsets, hearing protection, and Bluetooth solutions. 8 devices compared.
+3. **explosionproofradios.com** — ATEX/IECEx certified two-way radios: DMR, TETRA, Push-to-Talk over Cellular. 7 radios compared.
+4. **explosionprooftablets.com** — ATEX/IECEx certified tablets and rugged displays. Coming soon.
+5. **exknowledge.com** — Technical reference articles on ATEX/IECEx certification, zone classification, and protection concepts.
+
+## Key standards referenced
+- ATEX Directive 2014/34/EU — EU equipment directive for explosive atmospheres
+- IECEx (IEC 60079 series) — International certification scheme, accepted in 30+ countries
+- 1999/92/EC — Worker protection in explosive atmospheres (employer responsibilities)
+
+## Principles
+- No commercial relationships with any manufacturer
+- Scores based on published specifications and certification data
+- Every Ex notation verified against actual EU-Type or IECEx certificates
+- Written for HSE engineers and procurement professionals
+
+## Contact
+hello@hazardousareaguide.com

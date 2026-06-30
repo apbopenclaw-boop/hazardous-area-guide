@@ -154,17 +154,21 @@ tailwind.config = {
 
 <div id="mobileMenu" class="hidden fixed inset-0 z-40">
   <div class="absolute inset-0 bg-black/30 backdrop-blur-sm" onclick="document.getElementById('mobileMenu').classList.add('hidden')"></div>
-  <div class="absolute right-0 top-0 bottom-0 w-[280px] shadow-2xl overflow-y-auto" style="background:var(--bg, #fff);border-left:1px solid rgba(0,0,0,.1);">
+  <div class="absolute right-0 top-0 bottom-0 w-[280px] shadow-2xl overflow-y-auto" style="background:#0A0A0A;border-left:1px solid rgba(255,255,255,.1);">
     <div class="p-6 pt-5">
       <div class="flex items-center justify-between mb-8">
         <span class="font-semibold text-sm">Menü</span>
-        <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="p-1.5" aria-label="Close">
+        <button onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="p-1.5 text-gray-400" aria-label="Close">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
       <nav class="flex flex-col gap-2">
-        <a href="/de/" class="block py-2 text-[15px]">Startseite</a>
-        <div class="my-3 h-px" style="background:rgba(0,0,0,.1)"></div>
+        <a href="/de/" class="block py-2.5 px-3 rounded-lg text-[15px] text-gray-200 hover:bg-white/5">Home</a>
+        <a href="/de/#guides" class="block py-2.5 px-3 rounded-lg text-[15px] text-gray-400 hover:bg-white/5" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Guides</a>
+        <a href="/de/#standards" class="block py-2.5 px-3 rounded-lg text-[15px] text-gray-400 hover:bg-white/5" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Standards</a>
+        <a href="/de/#about" class="block py-2.5 px-3 rounded-lg text-[15px] text-gray-400 hover:bg-white/5" onclick="document.getElementById('mobileMenu').classList.add('hidden')">About</a>
+        <a href="/de/#contact" class="block py-2.5 px-3 rounded-lg text-[15px] text-gray-400 hover:bg-white/5" onclick="document.getElementById('mobileMenu').classList.add('hidden')">Contact</a>
+        <div class="my-3 h-px" style="background:rgba(255,255,255,.1)"></div>
         <select class="lang-select text-xs rounded px-2 py-1" onchange="if(this.value)window.location=this.value" aria-label="Language">
         <option value="/" selected>🇬🇧 EN</option><option value="/de/" >🇩🇪 DE</option><option value="/nl/" >🇳🇱 NL</option><option value="/es/" >🇪🇸 ES</option><option value="/pt-br/" >🇧🇷 PT</option>
       </select>

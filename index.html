@@ -141,17 +141,15 @@ tailwind.config = {
       <a href="#about" class="hover:text-fg transition-colors">About</a>
       <a href="#contact" class="hover:text-fg transition-colors">Contact</a>
     </nav>
-    <div class="hidden md:flex items-center gap-3 ml-auto">
-      <span class="font-mono text-[11px] text-gray-600">Rev 2026.06</span>
-      <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
+    
+        <select class="lang-select" onchange="if(this.value)window.location=this.value" aria-label="Language">
         <option value="/" selected>🇬🇧 EN</option>
         <option value="/de/">🇩🇪 DE</option>
         <option value="/nl/">🇳🇱 NL</option>
         <option value="/es/">🇪🇸 ES</option>
         <option value="/pt-br/">🇧🇷 PT</option>
       </select>
-    </div>
-  <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="md:hidden p-2 -mr-2 ml-auto" aria-label="Open menu">
+      <button onclick="document.getElementById('mobileMenu').classList.remove('hidden')" class="md:hidden p-2 -mr-2" aria-label="Open menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
     </div>

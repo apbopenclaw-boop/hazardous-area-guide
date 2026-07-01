@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark hexagon background -->
+  <path d="M16 1L30 8.5V23.5L16 31L2 23.5V8.5L16 1Z" fill="#1a1a1a"/>
+  <!-- Warning triangle -->
+  <path d="M16 8L26 25H6L16 8Z" stroke="#0070F3" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <!-- Exclamation mark -->
+  <line x1="16" y1="13" x2="16" y2="19" stroke="#0070F3" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="16" cy="22" r="1.2" fill="#0070F3"/>
+</svg>

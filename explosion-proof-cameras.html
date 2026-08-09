@@ -108,6 +108,9 @@ tailwind.config = {
       <p class="text-[15px] leading-[1.7] text-gray-400">
         Some camera systems use a combination: an Ex d enclosure for the camera with Ex e terminal boxes for power and data connections. The entire assembly must be covered by a single Ex certificate or a set of certificates that reference each other as associated apparatus.
       </p>
+      <p class="text-[15px] leading-[1.7] text-gray-400 mt-4">
+        The protection concept required depends on the <a href="https://hazardousareaguide.com/" class="underline text-gray-300 hover:text-fg" target="_blank" rel="noopener">hazardous area zone classification at your facility</a>. Zone 1 demands Ex d or Ex ia protection for cameras, while Zone 2 allows less stringent methods such as Ex nA or Ex ec. Most industrial camera manufacturers target Zone 1 certification because a single product can then serve both Zone 1 and Zone 2 installations.
+      </p>
     </div>
   </section>
 
@@ -195,6 +198,44 @@ tailwind.config = {
       </table>
     </div>
     <p class="text-[12px] text-gray-600 mt-3">Specifications from manufacturer datasheets as of August 2026. Verify current certification on the <a href="https://www.iecex.com" class="underline text-gray-400 hover:text-fg" target="_blank" rel="noopener">IECEx Online Certificate System</a>.</p>
+  </section>
+
+  <!-- § 4b — Selection criteria -->
+  <section class="mb-14">
+    <h2 class="text-[24px] font-semibold tracking-[-0.02em] mb-4">Selecting a camera for your application</h2>
+    <div class="tile p-6">
+      <p class="text-[15px] leading-[1.7] text-gray-400 mb-4">
+        Choosing the right explosion proof camera involves more than matching the Ex rating to the zone. Several application-specific factors determine which camera type and vendor will perform best on site:
+      </p>
+      <p class="text-[15px] leading-[1.7] text-gray-400 mb-4">
+        <strong class="text-fg">Network infrastructure.</strong> Cameras with Power over Ethernet (PoE) simplify installation by combining power and data in a single cable. However, PoE is limited to approximately 25W (standard PoE) or 60W (PoE++), which may not be sufficient for heated PTZ units in cold environments. Sites without existing Ethernet infrastructure may prefer cameras with fibre optic connections or coaxial options.
+      </p>
+      <p class="text-[15px] leading-[1.7] text-gray-400 mb-4">
+        <strong class="text-fg">Environmental conditions.</strong> Offshore platforms and chemical plants expose cameras to salt spray, hydrogen sulphide, and UV radiation. Marine-grade stainless steel (316L) housings resist these conditions better than painted aluminium. For cold climates, verify the camera includes a certified heater element — window fogging or ice formation can render a camera useless without one.
+      </p>
+      <p class="text-[15px] leading-[1.7] text-gray-400 mb-4">
+        <strong class="text-fg">Analytics and integration.</strong> Modern explosion proof cameras increasingly support on-edge video analytics — motion detection, line crossing, and flame/smoke detection. These analytics run on the camera processor, reducing bandwidth to the control room. When specifying a camera, confirm that the analytics firmware is included in the Ex certification; aftermarket software modifications to the camera processor could invalidate the certificate.
+      </p>
+      <p class="text-[15px] leading-[1.7] text-gray-400">
+        <strong class="text-fg">Maintenance access.</strong> Ex d cameras require the enclosure to be opened for lens cleaning and firmware updates. This must be done under a hot work permit or after the area has been gas-freed. Integrated units with wiper systems and remote firmware update capability reduce the frequency of enclosure openings — a significant operational advantage on platforms where gas-freeing is expensive and time-consuming.
+      </p>
+    </div>
+  </section>
+
+  <!-- § 4c — Installation considerations -->
+  <section class="mb-14">
+    <h2 class="text-[24px] font-semibold tracking-[-0.02em] mb-4">Installation and cable entry</h2>
+    <div class="tile p-6">
+      <p class="text-[15px] leading-[1.7] text-gray-400 mb-4">
+        Every cable entry into an Ex d camera enclosure must use a certified cable gland that matches the enclosure's thread type and Ex certification. Common thread standards are M20, M25, and ¾&quot; NPT. The cable gland must be listed in the camera's certificate schedule or carry its own compatible Ex d certification.
+      </p>
+      <p class="text-[15px] leading-[1.7] text-gray-400 mb-4">
+        Unused cable entries must be sealed with certified blanking plugs — not standard pipe fittings. A single uncertified blanking plug compromises the entire enclosure's flameproof integrity.
+      </p>
+      <p class="text-[15px] leading-[1.7] text-gray-400">
+        Mounting brackets and junction boxes are often overlooked in camera installations. If the junction box is within the hazardous area, it must carry its own Ex certification (typically Ex e for terminal boxes). The bracket itself does not require certification but must be designed so that it does not create a hot surface or friction spark hazard — stainless steel or non-sparking alloy brackets are standard practice.
+      </p>
+    </div>
   </section>
 
   <!-- § 5 -->

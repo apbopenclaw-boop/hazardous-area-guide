@@ -5,32 +5,35 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Thank You — Hazardous Area Guide</title>
 <meta name="robots" content="noindex" />
-<link rel="stylesheet" href="/css/style.css" />
-<style>
-  .thankyou-page { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 0 24px; }
-  .thankyou-card { max-width: 480px; text-align: center; }
-  .thankyou-icon {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 64px; height: 64px; border-radius: 50%; margin-bottom: 24px;
-    border: 1px solid rgba(0,112,243,0.3); background: rgba(0,112,243,0.08);
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { bg: '#0A0A0A', fg: '#FAFAFA', accent: '#0070F3' },
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"Geist Mono"','monospace'] },
+      borderRadius: { tile: '8px' }
+    }
   }
-  .thankyou-icon svg { width: 32px; height: 32px; color: var(--color-accent); }
-  .thankyou-label { font-family: var(--font-mono); font-size: 12px; color: var(--gray-500); letter-spacing: 0.04em; margin-bottom: 16px; }
-  .thankyou-title { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 12px; }
-  .thankyou-text { font-size: 14px; color: var(--gray-400); line-height: 1.6; margin-bottom: 32px; }
+}
+</script>
+<style>
+  html,body { background: #0A0A0A; color: #FAFAFA; }
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 </style>
 </head>
-<body>
-  <div class="thankyou-page">
-    <div class="thankyou-card">
-      <div class="thankyou-icon">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-      </div>
-      <p class="thankyou-label">§ Message sent</p>
-      <h1 class="thankyou-title">Thank you</h1>
-      <p class="thankyou-text">Your message has been received. We'll get back to you as soon as possible.</p>
-      <a href="/" class="btn btn-primary">Back to home</a>
+<body class="min-h-screen flex items-center justify-center px-6">
+  <div class="max-w-[480px] text-center">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6" style="border:1px solid rgba(0,112,243,0.3);background:rgba(0,112,243,0.08)">
+      <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
     </div>
+    <p class="font-mono text-[12px] text-gray-500 tracking-[0.04em] mb-4">§ Message sent</p>
+    <h1 class="text-[28px] font-semibold tracking-[-0.02em] mb-3">Thank you</h1>
+    <p class="text-[14px] text-gray-400 leading-relaxed mb-8">Your message has been received. We'll get back to you as soon as possible.</p>
+    <a href="/" class="inline-block px-5 py-2.5 bg-fg text-bg text-[13px] font-medium rounded-tile hover:bg-gray-200 transition-colors">Back to home</a>
   </div>
 </body>
 </html>

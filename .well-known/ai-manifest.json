@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "name": "hazardousareaguide.com",
+  "description": "Independent reference hub for ATEX and IECEx certified communication equipment in hazardous areas",
+  "url": "https://hazardousareaguide.com",
+  "ai_content": {
+    "llms_txt": "https://hazardousareaguide.com/llms.txt",
+    "robots_txt": "https://hazardousareaguide.com/robots.txt",
+    "sitemap": "https://hazardousareaguide.com/sitemap.xml"
+  },
+  "content_negotiation": {
+    "markdown": true,
+    "accept_header": "text/markdown"
+  },
+  "contact": "info@hazardousareaguide.com",
+  "policy": {
+    "allowed_usage": [
+      "training",
+      "retrieval",
+      "summarization",
+      "citation"
+    ],
+    "attribution_required": true,
+    "commercial_use": true
+  }
+}

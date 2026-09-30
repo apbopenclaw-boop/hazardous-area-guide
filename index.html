@@ -543,7 +543,7 @@ tailwind.config = {
     <p class="section-label mb-4">§ Contact</p>
     <h2 class="text-[24px] font-semibold tracking-[-0.02em] mb-2">Get in touch</h2>
     <p class="text-[13px] text-gray-500 mb-8">Questions, corrections, or suggestions for new equipment categories.</p>
-    <form id="contactForm" action="https://formsubmit.co/info@hazardousareaguide.com" method="POST" class="space-y-4">
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
           <label class="font-mono text-[11px] text-gray-600 block mb-1.5">Name</label>
@@ -562,10 +562,11 @@ tailwind.config = {
         <label class="font-mono text-[11px] text-gray-600 block mb-1.5">Message</label>
         <textarea name="message" rows="4" required class="w-full px-3 py-2 rounded-tile bg-gray-950 text-[13px] text-fg focus:outline-none transition resize-none" style="border:1px solid rgba(255,255,255,0.08)"></textarea>
       </div>
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_subject" value="hazardousareaguide.com — New contact" />
-      <input type="hidden" name="_next" value="https://hazardousareaguide.com/thank-you.html" />
+      <input type="hidden" name="access_key" value="930572e9-b94e-4d18-9c2b-25999a09ef0f" />
+      <input type="hidden" name="subject" value="hazardousareaguide.com — New contact" />
+      <input type="hidden" name="from_name" value="hazardousareaguide.com" />
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="hidden" name="redirect" value="https://hazardousareaguide.com/thank-you.html" />
       <button type="submit" class="px-5 py-2.5 bg-fg text-bg text-[13px] font-medium rounded-tile hover:bg-gray-200 transition-colors">Send message</button>
     </form>
     <div id="formSuccess" class="hidden mt-4 p-3 rounded-tile text-[13px]" style="border:1px solid rgba(0,112,243,0.3);color:#0070F3">
@@ -626,8 +627,10 @@ if(cf) cf.addEventListener('submit',async function(e){
   const btn=cf.querySelector('button[type=submit]');
   btn.disabled=true;btn.textContent='Sending...';
   try{
-    const r=await fetch(cf.action,{method:'POST',body:new FormData(cf),headers:{'Accept':'application/json'}});
-    if(r.ok){cf.reset();cf.style.display='none';document.getElementById('formSuccess').classList.remove('hidden');}
+    const ctrl=new AbortController();const t=setTimeout(()=>ctrl.abort(),15000);   // never hang on 'Sending...'
+    const r=await fetch(cf.action,{method:'POST',body:new FormData(cf),headers:{'Accept':'application/json'},signal:ctrl.signal});
+    clearTimeout(t);const j=await r.json().catch(()=>({}));
+    if(r.ok&&j.success!==false){cf.reset();cf.style.display='none';document.getElementById('formSuccess').classList.remove('hidden');}
     else{btn.textContent='Error — try again';btn.disabled=false;}
   }catch{btn.textContent='Error — try again';btn.disabled=false;}
 });
